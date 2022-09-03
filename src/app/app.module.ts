@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { PostListComponent } from './posts/post-list/post-list.component';
 import {MatExpansionModule} from '@angular/material/expansion'
-import { PostService } from './posts/posts.service';
+
 
 
 
@@ -33,9 +34,10 @@ import { PostService } from './posts/posts.service';
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    HttpClientModule
   ],
-  providers: [PostService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
